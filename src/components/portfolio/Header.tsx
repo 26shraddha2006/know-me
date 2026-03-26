@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/hooks/use-theme";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -15,6 +16,7 @@ const navItems = [
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -49,6 +51,13 @@ const Header = () => {
               {item.label}
             </a>
           ))}
+          <button
+            onClick={toggleTheme}
+            className="ml-2 p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
         </nav>
 
         {/* Mobile toggle */}
