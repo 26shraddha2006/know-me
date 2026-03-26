@@ -21,7 +21,7 @@ const Hero = () => (
           Shraddha Yadav
         </h1>
         <p className="text-xl text-muted-foreground mb-6 max-w-lg">
-          BTech CSE Student · Full-Stack Developer · Cybersecurity Enthusiast
+          BTech CSE Student · Cybersecurity Enthusiast
         </p>
         <p className="text-muted-foreground mb-8 max-w-md leading-relaxed">
           Passionate about building efficient software and exploring cybersecurity. Currently contributing to open-source and solving DSA problems on LeetCode.
