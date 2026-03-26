@@ -8,7 +8,7 @@ const certs = [
   { title: "Cybersecurity Analyst Job Simulation", issuer: "Forage", date: "Sept 2025", link: "/certs/Cybersecurity_Analyst_Job_Simulation.pdf" },
   { title: "Solutions Architecture Job Simulation", issuer: "Forage", date: "2025", link: "/certs/Solutions_Architecture_Job_Simulation.pdf" },
   { title: "Data Structures and Algorithms", issuer: "LPU", date: "July 2025", link: "/certs/Basics_of_DSA.pdf" },
-  { title: "Cloud Computing", issuer: "NPTEL", date: "2025", link: "" },
+  { title: "Cloud Computing", issuer: "NPTEL", date: "2025", link: "/certs/Cloud_Computing.pdf" },
 ];
 
 const trainings = [
