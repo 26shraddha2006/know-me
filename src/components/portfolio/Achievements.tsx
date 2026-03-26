@@ -3,12 +3,10 @@ import SectionHeading from "./SectionHeading";
 import { Trophy, Medal, Star, Zap } from "lucide-react";
 
 const achievements = [
-  { icon: Trophy, title: "Smart India Hackathon Finalist", desc: "Reached national finals with a healthcare management solution", year: "2024" },
-  { icon: Medal, title: "LeetCode 1800+ Rating", desc: "Top 5% globally, solved 500+ problems across platforms", year: "2024" },
-  { icon: Star, title: "Dean's List — 3 Semesters", desc: "Maintained 9.0+ CGPA consistently", year: "2022–24" },
-  { icon: Zap, title: "1st Place — College Code Sprint", desc: "Won annual competitive programming contest among 200+ participants", year: "2023" },
-  { icon: Trophy, title: "Open Source Contributor", desc: "Contributed to 5+ popular GitHub repositories with merged PRs", year: "2023–24" },
-  { icon: Medal, title: "Technical Lead — Coding Club", desc: "Led a team of 30+ members, organized workshops and contests", year: "2023–24" },
+  { icon: Trophy, title: "200+ DSA Problems on LeetCode", desc: "Solved 200+ Data Structures and Algorithms problems", year: "2025" },
+  { icon: Medal, title: "Top 4% on TryHackMe", desc: "Global performer in cybersecurity challenges", year: "2025" },
+  { icon: Star, title: "GSSoC '25 Contributor", desc: "Selected as a Contributor in GirlScript Summer of Code 2025", year: "2025" },
+  { icon: Zap, title: "TryHackMe & LeetCode Challenges", desc: "Completed 30-day, 90-day, and 180-day challenges and earned all badges", year: "2025" },
 ];
 
 const Achievements = () => (
@@ -16,7 +14,7 @@ const Achievements = () => (
     <div className="max-w-6xl mx-auto">
       <SectionHeading title="Achievements" subtitle="Milestones I'm proud of" />
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
         {achievements.map((a, i) => (
           <motion.div
             key={a.title}

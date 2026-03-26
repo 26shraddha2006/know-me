@@ -35,7 +35,7 @@ const Header = () => {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="font-display text-xl font-bold text-gradient">
-          Portfolio
+          Shraddha
         </a>
 
         {/* Desktop */}
