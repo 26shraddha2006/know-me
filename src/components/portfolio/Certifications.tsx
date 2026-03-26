@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
-import { Award } from "lucide-react";
+import { Award, ExternalLink } from "lucide-react";
 
 const certs = [
-  { title: "OCI AI Foundations Associate", issuer: "Oracle", date: "Sept 2025" },
-  { title: "OCI Generative AI Professional", issuer: "Oracle", date: "Sept 2025" },
-  { title: "Cybersecurity Analyst Job Simulation", issuer: "Forage", date: "Sept 2025" },
-  { title: "Data Structures and Algorithms", issuer: "LPU", date: "July 2025" },
-  { title: "Cloud Computing", issuer: "NPTEL", date: "2025" },
+  { title: "OCI AI Foundations Associate", issuer: "Oracle", date: "Sept 2025", link: "/certs/AI_Foundations_Associate.pdf" },
+  { title: "OCI Generative AI Professional", issuer: "Oracle", date: "Sept 2025", link: "/certs/Generative_AI_Professional.pdf" },
+  { title: "Cybersecurity Analyst Job Simulation", issuer: "Forage", date: "Sept 2025", link: "/certs/Cybersecurity_Analyst_Job_Simulation.pdf" },
+  { title: "Solutions Architecture Job Simulation", issuer: "Forage", date: "2025", link: "/certs/Solutions_Architecture_Job_Simulation.pdf" },
+  { title: "Data Structures and Algorithms", issuer: "LPU", date: "July 2025", link: "/certs/Basics_of_DSA.pdf" },
+  { title: "Cloud Computing", issuer: "NPTEL", date: "2025", link: "" },
 ];
 
 const trainings = [
@@ -35,6 +36,12 @@ const Certifications = () => (
             <div className="flex-1 min-w-0">
               <h4 className="font-display font-semibold text-foreground text-sm leading-tight">{c.title}</h4>
               <p className="text-xs text-muted-foreground mt-1">{c.issuer} · {c.date}</p>
+              {c.link && (
+                <a href={c.link} target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs text-primary mt-2 hover:underline">
+                  View Certificate <ExternalLink size={10} />
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
