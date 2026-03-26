@@ -9,7 +9,7 @@ const Contact = () => {
   const [copied, setCopied] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const email = "yourname@email.com";
+  const email = "shraddhayadavxa@gmail.com";
 
   const copyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -53,8 +53,8 @@ const Contact = () => {
               </button>
 
               {[
-                { icon: Phone, text: "+91 98765 43210", sub: "Available Mon-Fri" },
-                { icon: MapPin, text: "New Delhi, India", sub: "Open to relocation" },
+                { icon: Phone, text: "+91 9793652612", sub: "Available Mon-Fri" },
+                { icon: MapPin, text: "Phagwara, Punjab", sub: "Open to relocation" },
               ].map(({ icon: Icon, text, sub }) => (
                 <div key={text} className="flex items-center gap-3">
                   <div className="p-2.5 rounded-lg bg-primary/10 text-primary">
@@ -71,8 +71,8 @@ const Contact = () => {
             {/* Social links */}
             <div className="flex gap-3 pt-4">
               {[
-                { icon: Github, href: "https://github.com", label: "GitHub" },
-                { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+                { icon: Github, href: "https://github.com/26shraddha2006", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/shraddhayadav2006/", label: "LinkedIn" },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}

@@ -18,13 +18,13 @@ const Hero = () => (
       >
         <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">Hello, I'm</p>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display text-foreground leading-tight mb-4">
-          Your Name
+          Shraddha Yadav
         </h1>
         <p className="text-xl text-muted-foreground mb-6 max-w-lg">
-          3rd Year BTech CSE Student · Full-Stack Developer · Tech Enthusiast
+          BTech CSE Student · Full-Stack Developer · Cybersecurity Enthusiast
         </p>
         <p className="text-muted-foreground mb-8 max-w-md leading-relaxed">
-          Passionate about building elegant solutions to complex problems. Currently exploring cloud computing, AI/ML, and open-source contributions.
+          Passionate about building efficient software and exploring cybersecurity. Currently contributing to open-source and solving DSA problems on LeetCode.
         </p>
 
         <div className="flex items-center gap-4 justify-center md:justify-start mb-8">
@@ -44,8 +44,8 @@ const Hero = () => (
 
         <div className="flex items-center gap-4 justify-center md:justify-start">
           {[
-            { icon: Github, href: "https://github.com", label: "GitHub" },
-            { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+            { icon: Github, href: "https://github.com/26shraddha2006", label: "GitHub" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/shraddhayadav2006/", label: "LinkedIn" },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

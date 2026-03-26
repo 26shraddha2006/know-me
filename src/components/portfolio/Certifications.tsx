@@ -1,18 +1,17 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
-import { Award, ExternalLink } from "lucide-react";
+import { Award } from "lucide-react";
 
 const certs = [
-  { title: "AWS Cloud Practitioner", issuer: "Amazon Web Services", date: "Jan 2024", link: "#" },
-  { title: "Full Stack Web Development", issuer: "Coursera (Meta)", date: "Aug 2023", link: "#" },
-  { title: "Machine Learning Specialization", issuer: "Stanford Online", date: "Mar 2024", link: "#" },
-  { title: "Data Structures & Algorithms", issuer: "Coding Ninjas", date: "Jun 2023", link: "#" },
-  { title: "React Advanced Patterns", issuer: "Udemy", date: "Nov 2023", link: "#" },
+  { title: "OCI AI Foundations Associate", issuer: "Oracle", date: "Sept 2025" },
+  { title: "OCI Generative AI Professional", issuer: "Oracle", date: "Sept 2025" },
+  { title: "Cybersecurity Analyst Job Simulation", issuer: "Forage", date: "Sept 2025" },
+  { title: "Data Structures and Algorithms", issuer: "LPU", date: "July 2025" },
+  { title: "Cloud Computing", issuer: "NPTEL", date: "2025" },
 ];
 
 const trainings = [
-  { title: "Summer Internship — Web Development", org: "TechCorp Solutions", duration: "Jun–Aug 2024" },
-  { title: "Workshop: System Design Fundamentals", org: "GeeksforGeeks", duration: "2 Days, Feb 2024" },
+  { title: "Basics of DSA — Summer Training", org: "Lovely Professional University", duration: "June–July 2025" },
 ];
 
 const Certifications = () => (
@@ -36,16 +35,12 @@ const Certifications = () => (
             <div className="flex-1 min-w-0">
               <h4 className="font-display font-semibold text-foreground text-sm leading-tight">{c.title}</h4>
               <p className="text-xs text-muted-foreground mt-1">{c.issuer} · {c.date}</p>
-              <a href={c.link} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs text-primary mt-2 hover:underline">
-                Verify <ExternalLink size={10} />
-              </a>
             </div>
           </motion.div>
         ))}
       </div>
 
-      <h3 className="font-display font-semibold text-foreground text-lg mb-4 text-center">Internships & Training</h3>
+      <h3 className="font-display font-semibold text-foreground text-lg mb-4 text-center">Summer Training</h3>
       <div className="max-w-2xl mx-auto space-y-3">
         {trainings.map((t, i) => (
           <motion.div

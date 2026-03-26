@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
-import { Code2, Lightbulb, Users, Coffee } from "lucide-react";
+import { Code2, Shield, Users, Coffee } from "lucide-react";
 
 const highlights = [
-  { icon: Code2, label: "500+ Problems Solved", desc: "On coding platforms" },
-  { icon: Lightbulb, label: "10+ Projects", desc: "Built & deployed" },
-  { icon: Users, label: "Team Player", desc: "Hackathons & group projects" },
+  { icon: Code2, label: "200+ Problems Solved", desc: "On LeetCode" },
+  { icon: Shield, label: "Cybersecurity", desc: "Top 4% on TryHackMe" },
+  { icon: Users, label: "Open Source", desc: "GSSoC '25 Contributor" },
   { icon: Coffee, label: "Always Learning", desc: "New tech every week" },
 ];
 
@@ -23,19 +23,19 @@ const About = () => (
           className="space-y-4 text-muted-foreground leading-relaxed"
         >
           <p>
-            I'm a <span className="text-foreground font-medium">3rd-year BTech Computer Science</span> student
-            with a deep passion for building software that makes a difference. From full-stack web apps to
-            system design, I love turning ideas into functional, elegant products.
+            I'm a <span className="text-foreground font-medium">BTech Computer Science & Engineering</span> student
+            at Lovely Professional University with a deep passion for building software and exploring cybersecurity.
+            From full-stack web apps to security analysis, I love turning ideas into functional, elegant products.
           </p>
           <p>
-            Currently, I'm exploring <span className="text-foreground font-medium">cloud-native development</span>,
-            <span className="text-foreground font-medium"> machine learning</span>, and
-            <span className="text-foreground font-medium"> competitive programming</span>. I believe in
-            writing clean, maintainable code and contributing to the open-source community.
+            Currently, I'm exploring <span className="text-foreground font-medium">cybersecurity tools</span> like
+            Nmap, Metasploit, and Burp Suite, while strengthening my
+            <span className="text-foreground font-medium"> Data Structures & Algorithms</span> skills. I'm also
+            an active <span className="text-foreground font-medium">open-source contributor</span> in GirlScript Summer of Code 2025.
           </p>
           <p>
-            When I'm not coding, you'll find me reading tech blogs, playing chess, or exploring
-            new coffee shops. I'm always open to collaborating on interesting projects!
+            I believe in writing clean, maintainable code and continuously pushing my boundaries through
+            hackathons, coding challenges, and hands-on projects.
           </p>
         </motion.div>
 
@@ -46,7 +46,7 @@ const About = () => (
           transition={{ duration: 0.5, delay: 0.1 }}
           className="grid grid-cols-2 gap-4"
         >
-          {highlights.map(({ icon: Icon, label, desc }, i) => (
+          {highlights.map(({ icon: Icon, label, desc }) => (
             <div
               key={label}
               className="bg-card-gradient rounded-xl p-5 shadow-card border border-border hover:shadow-elevated transition-shadow"

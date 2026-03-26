@@ -3,43 +3,40 @@ import SectionHeading from "./SectionHeading";
 
 interface Skill {
   name: string;
-  level: number; // 0-100
+  level: number;
 }
 
 const categories: { title: string; skills: Skill[] }[] = [
   {
     title: "Programming Languages",
     skills: [
-      { name: "JavaScript / TypeScript", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "C / C++", level: 80 },
-      { name: "Java", level: 70 },
-      { name: "SQL", level: 75 },
+      { name: "C / C++", level: 85 },
+      { name: "Java", level: 80 },
+      { name: "Python", level: 75 },
+      { name: "JavaScript", level: 70 },
     ],
   },
   {
-    title: "Frameworks & Libraries",
+    title: "Tools & Platforms",
     skills: [
-      { name: "React.js", level: 90 },
-      { name: "Node.js / Express", level: 85 },
-      { name: "Tailwind CSS", level: 90 },
-      { name: "MongoDB / Mongoose", level: 75 },
-      { name: "Next.js", level: 70 },
+      { name: "Nmap / Nessus", level: 80 },
+      { name: "Metasploit / Burp Suite", level: 75 },
+      { name: "Kali Linux", level: 80 },
+      { name: "Wireshark", level: 70 },
+      { name: "Git & GitHub", level: 85 },
     ],
   },
   {
-    title: "Tools & Technologies",
+    title: "Web Technologies",
     skills: [
-      { name: "Git & GitHub", level: 90 },
-      { name: "Docker", level: 65 },
-      { name: "AWS / GCP", level: 60 },
-      { name: "Linux", level: 75 },
-      { name: "Figma", level: 70 },
+      { name: "HTML / CSS", level: 85 },
+      { name: "Spring Boot / REST APIs", level: 70 },
+      { name: "DOM Manipulation", level: 75 },
     ],
   },
 ];
 
-const softSkills = ["Problem Solving", "Team Collaboration", "Communication", "Time Management", "Adaptability", "Leadership"];
+const softSkills = ["Creative", "Problem-Solving", "Leadership", "Adaptability"];
 
 const SkillBar = ({ name, level, delay }: Skill & { delay: number }) => (
   <div className="space-y-1.5">
@@ -85,7 +82,6 @@ const Skills = () => (
         ))}
       </div>
 
-      {/* Soft skills */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
