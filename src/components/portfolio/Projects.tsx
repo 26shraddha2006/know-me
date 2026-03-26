@@ -21,7 +21,7 @@ const projects: Project[] = [
     action: "Implemented BFS (O(V+E)) and Dijkstra's Algorithm (O((V+E) log V)) in Java. Built a full-stack app using Spring Boot with an interactive HTML/CSS/JS frontend for dynamic route visualization.",
     result: "Scalable and efficient path computation using Adjacency List graphs, Priority Queue, HashMap, and HashSet.",
     tags: ["Java", "Spring Boot", "REST APIs", "Graph Algorithms", "BFS", "Dijkstra"],
-    github: "https://github.com/26shraddha2006",
+    github: "https://github.com/26shraddha2006/Smart-Route-Optimizer",
   },
   {
     title: "Real-Time Memory Allocation Tracker",
@@ -30,7 +30,7 @@ const projects: Project[] = [
     action: "Developed a DOM-driven visualization interface for reliable real-time memory updates. Integrated utilization and fragmentation metrics.",
     result: "Achieved 95% accuracy in memory simulation and improved comparison efficiency by 75%.",
     tags: ["HTML", "CSS", "JavaScript", "DOM", "OS Simulation"],
-    github: "https://github.com/26shraddha2006",
+    github: "https://github.com/26shraddha2006/OS_project",
   },
   {
     title: "Student Performance Predictor",
@@ -39,7 +39,7 @@ const projects: Project[] = [
     action: "Streamlined data processing with custom structures and QuickSort indexing. Designed a Chart.js-powered analytics dashboard with full data controls.",
     result: "Reached 85% prediction accuracy, reduced computation time by 40%, and improved reporting efficiency by 90%.",
     tags: ["HTML", "CSS", "JavaScript", "DOM", "Chart.js", "QuickSort", "Data Modeling"],
-    github: "https://github.com/26shraddha2006/Student-Performance-Predictor--1-",
+    github: "https://github.com/26shraddha2006/Student-Performance-Predictor--1-/tree/master/Student%20Performance%20Predictor",
   },
 ];
 

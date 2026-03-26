@@ -2,11 +2,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 import { Mail, Phone, MapPin, Copy, Check, Github, Linkedin, Send, Download } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const { toast } = useToast();
   const [copied, setCopied] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const email = "shraddhayadavxa@gmail.com";
@@ -18,10 +20,37 @@ const Contact = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Message sent!", description: "Thanks for reaching out. I'll get back to you soon." });
-    setForm({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        "service_rom7xg8",
+        "template_yll0ymi",
+        {
+          name: form.name,
+          email: form.email,
+          title: form.message,
+        },
+        "jr8QbssAFr4FK9W5a"
+      );
+
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon."
+      });
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        variant: "destructive",
+        title: "Failed to send message",
+        description: "Please try again later or email me directly."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -88,7 +117,8 @@ const Contact = () => {
 
             {/* Download CV */}
             <a
-              href="#"
+              href="/resume.pdf"
+              download
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity shadow-card"
             >
               <Download size={16} /> Download CV
@@ -142,9 +172,19 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity"
+              disabled={isSubmitting}
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <Send size={16} /> Send Message
+              {isSubmitting ? (
+                <>
+                  <div className="w-4 h-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                <>
+                  <Send size={16} /> Send Message
+                </>
+              )}
             </button>
           </motion.form>
         </div>

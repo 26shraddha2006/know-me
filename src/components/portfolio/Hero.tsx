@@ -40,6 +40,13 @@ const Hero = () => (
           >
             View Projects
           </a>
+          <a
+            href="/resume.pdf"
+            download
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium text-primary border border-primary/20 hover:bg-primary/5 transition-all shadow-sm text-sm"
+          >
+            <ArrowDown size={16} /> Download Resume
+          </a>
         </div>
 
         <div className="flex items-center gap-4 justify-center md:justify-start">
