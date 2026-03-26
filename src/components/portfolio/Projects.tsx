@@ -32,6 +32,15 @@ const projects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript", "DOM", "OS Simulation"],
     github: "https://github.com/26shraddha2006",
   },
+  {
+    title: "Student Performance Predictor",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    challenge: "Forecast student performance by building a prediction model using scores, attendance, and variance.",
+    action: "Streamlined data processing with custom structures and QuickSort indexing. Designed a Chart.js-powered analytics dashboard with full data controls.",
+    result: "Reached 85% prediction accuracy, reduced computation time by 40%, and improved reporting efficiency by 90%.",
+    tags: ["HTML", "CSS", "JavaScript", "DOM", "Chart.js", "QuickSort", "Data Modeling"],
+    github: "https://github.com/26shraddha2006/Student-Performance-Predictor--1-",
+  },
 ];
 
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => (
