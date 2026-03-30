@@ -117,7 +117,7 @@ const Contact = () => {
 
             {/* Download CV */}
             <a
-              href="/resume.pdf"
+              href="/certs/resume.pdf"
               download
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium text-primary-foreground bg-primary hover:opacity-90 transition-opacity shadow-card"
             >
